@@ -77,7 +77,8 @@ export class TableCell extends React.PureComponent<TableCellProps> {
 
         const {includeRightBorder} = getDefaultBorderIncludes(this.props);
         const defaultStyle: ReactPDF.Style = {
-            flex: this.props.weighting ?? 1,
+             // @ts-ignore
+             flex: (this.props.weighting ?? 1).toString(),
             // @ts-ignore
             justifyContent: "stretch",
             textAlign: this.props.textAlign ?? "left",
